@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Budget App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- External CSS -->
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <header>
+            <div class="header" id="appHeader">
+                <div id="containerIncLoss">
+                    <div id="incomeHead" class="profit">
+                        <p id="incHead">INCOME: </p>
+                    </div>
+                    <div id="lossHead" class="loss">
+                        <p id="expHead">EXPENSES: </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <!-- Input Values -->
+            <div id="inputBudget">
+                <!-- Select Positive or Negative -->
+                <select name="plusMinus" id="posNeg">
+                    <option value="">--Please Choose an Option--</option>
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                </select>
+                <!-- Other Details -->
+                <input type="text" placeholder="Add description" name="description" id="description">
+                <input type="number" placeholder="Value" name="Value" id="value">
+                <button id="submit">ADD</button>
+            </div>
+            <!-- Display Details -->
+            <div id="display">
+                <div id="income">
+                    <h3>INCOME</h3>
+                </div>
+                <div id="loss">
+                    <h3>EXPENSES</h3>
+                </div>
+            </div>
+        </main>
+        <!-- External JS -->
+        <script src="index.js"></script>
+    </body>
+</html>
