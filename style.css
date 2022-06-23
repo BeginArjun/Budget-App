@@ -1,0 +1,29 @@
+/* Header */
+#appHeader{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    background-color: black;
+    color: antiquewhite;
+    padding: 2em;
+}
+#incomeHead{
+    background-color: rgb(11, 216, 96);
+    padding:0.1em 0.8em 0.1em 0.8em;
+    margin-bottom: 2em;
+}
+#lossHead{
+    background-color: red;
+    padding:0.1em 0.8em 0.1em 0.8em;
+}
+/* Main App */
+/* Aliging Input Fields ad styling*/
+#inputBudget{
+    background-color: azure;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div > input{
+    height:3em;
+}
