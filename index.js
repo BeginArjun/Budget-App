@@ -82,13 +82,47 @@ let budgetControl=(function(){
                 data.allItems[type].splice(index,1)
             }
         },
+        //Calculate Budget
+        calcBudget:function(){
+            calcTotal('exp')
+            calcTotal('inc')
 
-        
+            //calculate budget= income -expense
+            data.budget=data.totals.inc-data.totals.exp
+
+            // calculate the percetange
+            if(data.totals.inc>0){
+                data.percentage=Math.round((data.totals.exp/data.totals.inc)*100)
+            }
+            else{
+                data.percentage=-1
+            }
+            console.log(data.allItems)
+        },
+        // Calculate Percentages
+        calculatePercetages:function(){
+            data.allItems.exp.forEach(function(cur){
+                cur.calcPercent(data.totals.inc)
+            })
+        },
+        getPercentages:function(){
+            let allPerc=data.allItems.exp.map(function(cur){
+                return cur.getPercent()
+            })
+        },
+        getBudget:function(){
+            return{
+                budget:data.budget,
+                totalInc:data.totals.inc,
+                totalExp:data.totals.exp,
+                percentage:data.percentage
+            }
+        },
+        // testing [delete later]
+        testing:function(){
+            console.log(data)
+        }
     }
 })
 
-// DOM Variables
-const addBtn=document.getElementById('submit')
-const desc=document.getElementById('description')
-const amount=document.getElementById('value')
-const posNeg=document.getElementById('posNeg')
+// UI Controller
