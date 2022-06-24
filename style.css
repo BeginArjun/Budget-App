@@ -27,3 +27,16 @@
 div > input{
     height:3em;
 }
+
+/*Records*/
+#display{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#income{
+    color:aquamarine;
+    text-decoration:underline;
+}
+#loss{
+    color:red;
+}
