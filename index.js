@@ -125,4 +125,41 @@ let budgetControl=(function(){
     }
 })
 
-// UI Controller
+// UI Controler
+//displays UI and manage DOM manipulation
+let UIControler=(function(){
+    let DOMstrings={
+        inputType:'posNeg',
+        inputDescription:'description',
+        inputValue:'value',
+        inputBtn:'add_btn',
+        incomeContainer:'income',
+        expensesContainer:'loss',
+        budgetLabel:'.budget_value',
+        incomeLabel:'.budget_income--value',
+        expensesLabel:'.budget_expenses--value',
+        percentageLabel:'.budget_expenses--percentage',
+        container:'.container',
+        expensesPercLabel:'.item_percentage',
+        dateLabel:'.budget_title--month'
+    }
+    let formatNumber= function(num,type){
+        let numSplit,int,dec 
+
+        // Accurate to 2 decimal
+        num=Math.abs(num)
+        num=num.toFixed(2)
+
+        //comma-separeted thousands
+        numSplit=num.split('.')
+        int=numSplit[0]
+        if(int.length>3){
+            int=int.substr(0,int.length-3)+','+int.substr(int.length-3,3)   // 1000 --> 1,000
+        }
+        dec=numSplit[1]
+        // + or -
+        return (type==='exp'?'-':'+')+ ' '+ int +'.'+dec
+    }
+    // nodeListforEach
+    
+})
