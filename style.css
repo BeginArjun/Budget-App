@@ -32,11 +32,21 @@ div > input{
 #display{
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-gap: 1em;
+    margin-top: 1em;
 }
-#income{
+#income>h3{
     color:aquamarine;
     text-decoration:underline;
 }
+#income{
+    border-right: 12px solid black;
+    padding: 5px;
+}
 #loss{
+    padding: 5px;
+}
+#loss>h3{
     color:red;
+    text-decoration:underline;
 }
