@@ -50,6 +50,24 @@ body {
 .expense-input {
   border: 0.05rem solid var(--mainRed) !important;
 }
+
+.expense-list__info{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.expense-item{
+  display:grid;
+  grid-template-columns: 50% 50%;
+}
+#appInfo{
+  display: flex;
+  flex-direction: column;
+}
+#insideApp{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 .expense-amount,
 .expense-title {
   color: var(--mainRed);
