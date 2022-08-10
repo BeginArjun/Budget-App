@@ -129,7 +129,7 @@ class UI {
         // Remove from DOM
         this.expenseList.removeChild(parent)
 
-        //Remove From The DOM
+        //Remove From The list
         let expenses=this.itemList.filter(function(item){
             return item.id===id
         })
@@ -148,6 +148,17 @@ class UI {
 
     //Delete Expense
     deleteExpense(element){
+        let id=parseInt(element.dataset.id)
+        let parent=element.parentElement.parentElement.parentElement
+        // Remove from DOM
+        this.expenseList.removeChild(parent)
+        
+        //Remove from list
+        let tempList=this.itemList.filter(function(item){
+            return item.id!=id
+        })
+        this.itemList=tempList
+        this.showBalance()
 
     }
 }
