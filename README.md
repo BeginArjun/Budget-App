@@ -7,6 +7,6 @@ A simple Budget App using Vanilla JavaScript
 - To Analyse What You Are Spending The Most On
 
 # INSTRUCTIONS
-- Enter the **Budget**
-- Enter the **Expense Title**
-- Enter the **Expense Value**
+- The User Must Enter the **Budget**
+- Then, Enter the **Expense Title**
+- Finally, Enter the **Expense Value**
