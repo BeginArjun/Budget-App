@@ -25,6 +25,7 @@ body {
   padding: 1rem;
   border-radius: 0.25rem;
 }
+
 .budget-submit {
   background: transparent;
   border: 0.1rem solid var(--mainGreen);
